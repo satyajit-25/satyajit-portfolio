@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Mail, Phone } from 'lucide-react';
+import { ThemeToggle } from '@/components/ThemeToggle';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,6 +77,7 @@ const Navigation = () => {
             <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
               <Phone size={20} />
             </a>
+            <ThemeToggle />
           </div>
         </div>
       </div>
