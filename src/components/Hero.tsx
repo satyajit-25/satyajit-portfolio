@@ -28,9 +28,12 @@ const Hero = () => {
       </div>
       
       {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-40" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23000000' fillOpacity='0.02'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }}></div>
+      <div 
+        className="absolute inset-0 opacity-40" 
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fillRule='evenodd'%3E%3Cg fill='%23000000' fillOpacity='0.02'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+        }}
+      ></div>
       
       <div className="container mx-auto px-6 py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -98,7 +101,7 @@ const Hero = () => {
                 {/* Profile image */}
                 <div className="absolute inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full p-2 backdrop-blur-sm">
                   <img 
-                    src="/lovable-uploads/54747841-ad67-432e-bd2f-9b944f9bde7b.png"
+                    src="/lovable-uploads/f2ffd384-72b5-4526-89db-511f1aef58f0.png"
                     alt="Satyajit Patra"
                     className="w-full h-full object-cover rounded-full shadow-2xl group-hover:scale-105 transition-transform duration-500"
                   />
