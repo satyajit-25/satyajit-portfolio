@@ -71,10 +71,10 @@ const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <a href="mailto:satyajit@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="mailto:satyajit.patra203@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
               <Mail size={20} />
             </a>
-            <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="tel:+917978272616" className="text-muted-foreground hover:text-primary transition-colors">
               <Phone size={20} />
             </a>
             <ThemeToggle />

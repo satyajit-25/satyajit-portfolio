@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -110,22 +111,22 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "satyajit.patra@example.com",
-      href: "mailto:satyajit.patra@example.com",
+      value: "satyajit.patra203@gmail.com",
+      href: "mailto:satyajit.patra203@gmail.com",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 98765 43210",
-      href: "tel:+919876543210",
+      value: "+91 79782 72616",
+      href: "tel:+917978272616",
       gradient: "from-green-500 to-teal-500"
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "linkedin.com/in/satyajit-patra",
-      href: "https://linkedin.com/in/satyajit-patra",
+      value: "linkedin.com/in/satyajit-patra-a33403323",
+      href: "https://linkedin.com/in/satyajit-patra-a33403323",
       gradient: "from-purple-500 to-pink-500"
     }
   ];

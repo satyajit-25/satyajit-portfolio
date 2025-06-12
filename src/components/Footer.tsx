@@ -14,13 +14,13 @@ const Footer = () => {
               solutions through code.
             </p>
             <div className="flex space-x-4">
-              <a href="mailto:satyajit.patra@example.com" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="mailto:satyajit.patra203@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="tel:+919876543210" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="tel:+917978272616" className="text-muted-foreground hover:text-primary transition-colors">
                 <Phone size={20} />
               </a>
-              <a href="https://linkedin.com/in/satyajit-patra" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="https://linkedin.com/in/satyajit-patra-a33403323" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
                 <Linkedin size={20} />
               </a>
             </div>
