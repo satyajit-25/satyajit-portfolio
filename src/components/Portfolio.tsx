@@ -13,7 +13,9 @@ const Portfolio = () => {
       company: "OCAC Internship",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
       featured: true,
-      year: "2024"
+      year: "2024",
+      viewDetailsLink: "https://github.com/satyajit-25/EDRS/blob/main/README.md",
+      codeLink: "https://github.com/satyajit-25/EDRS/tree/main/src/ocacjava2_6pm"
     },
     {
       title: "Web Application Dashboard",
@@ -102,14 +104,39 @@ const Portfolio = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <Button variant="outline" size="sm" className="group/btn hover:bg-primary hover:text-primary-foreground">
-                    <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform" />
-                    View Details
-                  </Button>
-                  <Button variant="ghost" size="sm" className="group/btn">
-                    <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                    Code
-                  </Button>
+                  {project.viewDetailsLink ? (
+                    <Button 
+                      variant="outline" 
+                      size="sm" 
+                      className="group/btn hover:bg-primary hover:text-primary-foreground"
+                      onClick={() => window.open(project.viewDetailsLink, '_blank')}
+                    >
+                      <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform" />
+                      View Details
+                    </Button>
+                  ) : (
+                    <Button variant="outline" size="sm" className="group/btn hover:bg-primary hover:text-primary-foreground">
+                      <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform" />
+                      View Details
+                    </Button>
+                  )}
+                  
+                  {project.codeLink ? (
+                    <Button 
+                      variant="ghost" 
+                      size="sm" 
+                      className="group/btn"
+                      onClick={() => window.open(project.codeLink, '_blank')}
+                    >
+                      <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                      Code
+                    </Button>
+                  ) : (
+                    <Button variant="ghost" size="sm" className="group/btn">
+                      <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                      Code
+                    </Button>
+                  )}
                 </div>
               </div>
             </div>
