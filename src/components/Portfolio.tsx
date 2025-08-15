@@ -18,6 +18,30 @@ const Portfolio = () => {
       codeLink: "https://github.com/satyajit-25/EDRS/tree/main/src/ocacjava2_6pm"
     },
     {
+      title: "AI Computer Vision Toolkit (Virtual Mouse & Hand Gesture Detection)",
+      description: "Advanced computer vision project implementing virtual mouse control and hand gesture recognition using AI and machine learning techniques for touchless interaction.",
+      technologies: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
+      role: "AI Developer",
+      company: "Personal Project",
+      image: "https://images.unsplash.com/photo-1559827260-dc66d52bef19",
+      featured: false,
+      year: "2024",
+      viewDetailsLink: "https://github.com/satyajit-25/VisionMouse/blob/main/README.md",
+      codeLink: "https://github.com/satyajit-25/VisionMouse/blob/main/ai_virtual_mouse.py"
+    },
+    {
+      title: "Employee Salary Prediction Project",
+      description: "Machine learning model for predicting employee salaries based on various features using regression algorithms and data analysis techniques.",
+      technologies: ["Python", "Machine Learning", "Pandas", "Scikit-learn"],
+      role: "Data Scientist",
+      company: "Personal Project",
+      image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+      featured: false,
+      year: "2024",
+      viewDetailsLink: "https://github.com/satyajit-25/Employee-salary-prediction/blob/main/README.md",
+      codeLink: "https://github.com/satyajit-25/Employee-salary-prediction/blob/main/app.py"
+    },
+    {
       title: "Web Application Dashboard",
       description: "Modern responsive dashboard application with real-time data visualization and user management features.",
       technologies: ["JavaScript", "HTML5", "CSS3"],
