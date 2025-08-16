@@ -125,7 +125,7 @@ const Hero = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
             <div className="group hover:scale-105 transition-transform duration-300">
               <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
-                <div className="text-3xl font-bold text-primary mb-2">50+</div>
+                <div className="text-3xl font-bold text-primary mb-2">10+</div>
                 <div className="text-sm text-muted-foreground font-medium">Projects completed</div>
               </div>
             </div>
@@ -137,8 +137,8 @@ const Hero = () => {
             </div>
             <div className="group hover:scale-105 transition-transform duration-300">
               <div className="bg-card/50 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300">
-                <div className="text-3xl font-bold text-primary mb-2">98.7%</div>
-                <div className="text-sm text-muted-foreground font-medium">Client satisfaction</div>
+                <div className="text-3xl font-bold text-primary mb-2">4+</div>
+                <div className="text-sm text-muted-foreground font-medium">Certifications earned</div>
               </div>
             </div>
           </div>
