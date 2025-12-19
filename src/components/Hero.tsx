@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, Sparkles, Code, Zap } from 'lucide-react';
+import { ArrowDown, Code, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
@@ -88,35 +88,23 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Enhanced profile section */}
+          {/* Professional profile section */}
           <div className="flex justify-center lg:justify-end animate-scale-in delay-500">
             <div className="relative group">
-              {/* Main profile container with enhanced styling */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                {/* Outer glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
-                
-                {/* Rotating border gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full p-1 animate-spin" style={{ animationDuration: '10s' }}>
+                {/* Clean border */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full p-1">
                   <div className="w-full h-full bg-background rounded-full"></div>
                 </div>
                 
                 {/* Profile image */}
-                <div className="absolute inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full p-1 backdrop-blur-sm border-2 border-primary/30 shadow-[0_0_40px_rgba(var(--primary),0.3)]">
+                <div className="absolute inset-3 rounded-full overflow-hidden border-4 border-border shadow-xl">
                   <img 
                     src={profilePhoto}
                     alt="Satyajit Patra"
-                    className="w-full h-full object-cover rounded-full shadow-2xl group-hover:scale-105 transition-transform duration-500 ring-4 ring-background/50"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-              </div>
-              
-              {/* Floating elements */}
-              <div className="absolute -top-6 -right-6 w-16 h-16 bg-primary/20 rounded-xl backdrop-blur-sm border border-primary/30 flex items-center justify-center animate-pulse">
-                <Code className="w-8 h-8 text-primary" />
-              </div>
-              <div className="absolute -bottom-6 -left-6 w-14 h-14 bg-accent/20 rounded-xl backdrop-blur-sm border border-accent/30 flex items-center justify-center animate-pulse delay-1000">
-                <Sparkles className="w-6 h-6 text-accent" />
               </div>
             </div>
           </div>
