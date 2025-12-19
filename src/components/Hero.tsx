@@ -39,8 +39,7 @@ const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left space-y-8">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary animate-fade-in">
-              <Sparkles className="w-4 h-4" />
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary animate-fade-in">
               <span>Available for opportunities</span>
             </div>
             
