@@ -2,6 +2,7 @@
 import React from 'react';
 import { ArrowDown, Sparkles, Code, Zap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import profilePhoto from '@/assets/profile-photo.jpg';
 
 const Hero = () => {
   const scrollToPortfolio = () => {
@@ -100,7 +101,7 @@ const Hero = () => {
                 {/* Profile image */}
                 <div className="absolute inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full p-2 backdrop-blur-sm">
                   <img 
-                    src="/lovable-uploads/f2ffd384-72b5-4526-89db-511f1aef58f0.png"
+                    src={profilePhoto}
                     alt="Satyajit Patra"
                     className="w-full h-full object-cover rounded-full shadow-2xl group-hover:scale-105 transition-transform duration-500"
                   />
