@@ -93,20 +93,20 @@ const Hero = () => {
             <div className="relative group">
               {/* Main profile container with enhanced styling */}
               <div className="relative w-80 h-80 lg:w-96 lg:h-96">
-                {/* Outer glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full blur-xl opacity-50 group-hover:opacity-70 transition-opacity duration-500"></div>
+                {/* Subtle outer glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/60 via-accent/40 to-primary/60 rounded-full blur-2xl opacity-25 group-hover:opacity-40 transition-opacity duration-500"></div>
                 
-                {/* Rotating border gradient */}
-                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-primary rounded-full p-1 animate-spin" style={{ animationDuration: '10s' }}>
+                {/* Subtle rotating border gradient */}
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/50 via-accent/30 to-primary/50 rounded-full p-[2px] animate-spin" style={{ animationDuration: '15s' }}>
                   <div className="w-full h-full bg-background rounded-full"></div>
                 </div>
                 
                 {/* Profile image */}
-                <div className="absolute inset-2 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full p-1 backdrop-blur-sm border-2 border-primary/30 shadow-[0_0_40px_rgba(var(--primary),0.3)]">
+                <div className="absolute inset-2 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full p-1 backdrop-blur-sm border border-primary/20 shadow-lg">
                   <img 
                     src={profilePhoto}
                     alt="Satyajit Patra"
-                    className="w-full h-full object-cover rounded-full shadow-2xl group-hover:scale-105 transition-transform duration-500 ring-4 ring-background/50"
+                    className="w-full h-full object-cover rounded-full shadow-xl group-hover:scale-105 transition-transform duration-500 ring-2 ring-primary/10"
                   />
                 </div>
               </div>
