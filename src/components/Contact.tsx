@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,8 +6,13 @@ import { Mail, Phone, Linkedin, MapPin, Send, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '@/config/emailjs';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Contact = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { ref: leftRef, isVisible: leftVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { ref: rightRef, isVisible: rightVisible } = useScrollAnimation({ threshold: 0.1 });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -140,7 +144,10 @@ const Contact = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
             <Mail className="w-4 h-4" />
             <span>Contact</span>
@@ -156,7 +163,10 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-16">
-          <div className="animate-fade-in">
+          <div 
+            ref={leftRef}
+            className={`${leftVisible ? 'scroll-visible-left' : 'scroll-hidden-left'}`}
+          >
             <h3 className="text-2xl font-semibold mb-8">Get in touch</h3>
             
             <div className="space-y-6">
@@ -168,7 +178,8 @@ const Contact = () => {
                     href={method.href}
                     target={method.title === "LinkedIn" ? "_blank" : "_self"}
                     rel={method.title === "LinkedIn" ? "noopener noreferrer" : ""}
-                    className="flex items-center space-x-4 p-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl hover:shadow-xl hover:scale-105 transition-all duration-300 group"
+                    className={`flex items-center space-x-4 p-6 bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl hover:shadow-xl hover:scale-105 transition-all duration-300 group ${leftVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+                    style={{ transitionDelay: `${index * 100 + 200}ms` }}
                   >
                     <div className={`w-14 h-14 bg-gradient-to-r ${method.gradient} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
                       <IconComponent className="text-white" size={24} />
@@ -183,7 +194,10 @@ const Contact = () => {
             </div>
           </div>
           
-          <div className="animate-fade-in">
+          <div 
+            ref={rightRef}
+            className={`${rightVisible ? 'scroll-visible-right' : 'scroll-hidden-right'}`}
+          >
             <div className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8">
               <h3 className="text-2xl font-semibold mb-6">Send me a message</h3>
               

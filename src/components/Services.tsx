@@ -1,8 +1,11 @@
-
 import React from 'react';
 import { Globe, Code, Database, Brain, CheckCircle } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Services = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.1 });
+
   const services = [
     {
       title: "Web Development",
@@ -43,7 +46,10 @@ const Services = () => {
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
             <Code className="w-4 h-4" />
             <span>Services</span>
@@ -58,14 +64,14 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div ref={gridRef} className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div 
                 key={index} 
-                className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 animate-fade-in hover:shadow-xl hover:scale-105 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 150}ms` }}
+                className={`bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-8 hover:shadow-xl hover:scale-105 transition-all duration-300 group ${gridVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+                style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="flex items-center gap-4 mb-6">
                   <div className={`w-16 h-16 bg-gradient-to-r ${service.gradient} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform`}>
