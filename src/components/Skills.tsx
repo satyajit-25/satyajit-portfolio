@@ -1,8 +1,11 @@
-
 import React from 'react';
 import { Code2, Database, Globe, Brain, GitBranch } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Skills = () => {
+  const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.1 });
+  const { ref: gridRef, isVisible: gridVisible } = useScrollAnimation({ threshold: 0.1 });
+
   const skillCategories = [
     {
       title: "Programming Languages",
@@ -58,7 +61,10 @@ const Skills = () => {
       </div>
       
       <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16">
+        <div 
+          ref={headerRef}
+          className={`text-center mb-16 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+        >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
             <Code2 className="w-4 h-4" />
             <span>Technical Skills</span>
@@ -75,14 +81,14 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillCategories.map((category, index) => {
             const IconComponent = category.icon;
             return (
               <div 
                 key={index} 
-                className="bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 animate-fade-in hover:shadow-xl hover:scale-105 transition-all duration-300 group"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl p-6 hover:shadow-xl hover:scale-105 transition-all duration-300 group ${gridVisible ? 'scroll-visible' : 'scroll-hidden'}`}
+                style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -102,8 +108,8 @@ const Skills = () => {
                         <div 
                           className="bg-gradient-to-r from-primary to-accent h-2 rounded-full transition-all duration-1000 ease-out"
                           style={{ 
-                            width: `${skill.level}%`,
-                            animationDelay: `${(index * 100) + (skillIndex * 200)}ms`
+                            width: gridVisible ? `${skill.level}%` : '0%',
+                            transitionDelay: `${(index * 100) + (skillIndex * 200)}ms`
                           }}
                         ></div>
                       </div>
