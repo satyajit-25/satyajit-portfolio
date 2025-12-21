@@ -39,10 +39,6 @@ const Hero = () => {
       <div className="container mx-auto px-6 py-32 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="text-center lg:text-left space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary animate-fade-in">
-              <span>Available for opportunities</span>
-            </div>
             
             {/* Main heading with enhanced typography */}
             <div className="space-y-4 animate-fade-in">
