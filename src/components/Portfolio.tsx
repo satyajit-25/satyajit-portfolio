@@ -18,7 +18,7 @@ const Portfolio = () => {
       role: "Project Leader",
       company: "OCAC Internship",
       image: edrsImg,
-      featured: true,
+      featured: false,
       year: "2024",
       viewDetailsLink: "https://github.com/satyajit-25/EDRS/blob/main/README.md",
       codeLink: "https://github.com/satyajit-25/EDRS/tree/main/src/ocacjava2_6pm"
