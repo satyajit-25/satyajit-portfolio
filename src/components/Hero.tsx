@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ArrowDown, Code, Zap } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.jpg';
 
@@ -68,17 +68,15 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in delay-300">
               <Button 
                 onClick={scrollToPortfolio}
-                className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                <Code className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
                 View My Work
               </Button>
               <Button 
                 onClick={scrollToContact}
                 variant="outline"
-                className="group border-2 border-primary/20 hover:border-primary hover:bg-primary/5 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105"
+                className="border-2 border-primary/20 hover:border-primary hover:bg-primary/5 px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 hover:scale-105"
               >
-                <Zap className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
                 Let's Connect
               </Button>
             </div>
