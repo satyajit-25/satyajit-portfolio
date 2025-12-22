@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, Users, Lightbulb, TrendingUp } from 'lucide-react';
+import { Users, Lightbulb, TrendingUp } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const About = () => {
@@ -14,9 +14,8 @@ const About = () => {
             ref={sectionRef}
             className={`${isVisible ? 'scroll-visible-left' : 'scroll-hidden-left'}`}
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
-              <GraduationCap className="w-4 h-4" />
-              <span>About Me</span>
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
+              About Me
             </div>
             
             <h2 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">

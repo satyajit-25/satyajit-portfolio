@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, Linkedin, MapPin, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, Linkedin, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import emailjs from '@emailjs/browser';
 import { emailjsConfig } from '@/config/emailjs';
@@ -148,9 +148,8 @@ const Contact = () => {
           ref={headerRef}
           className={`text-center mb-16 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
-            <Mail className="w-4 h-4" />
-            <span>Contact</span>
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
+            Contact
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
@@ -250,7 +249,7 @@ const Contact = () => {
                 <Button 
                   type="submit" 
                   disabled={isLoading}
-                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-lg font-semibold rounded-xl group"
+                  className="w-full bg-primary text-primary-foreground hover:bg-primary/90 py-6 text-lg font-semibold rounded-xl"
                 >
                   {isLoading ? (
                     <>
@@ -258,10 +257,7 @@ const Contact = () => {
                       Sending...
                     </>
                   ) : (
-                    <>
-                      <Send className="w-5 h-5 mr-2 group-hover:rotate-45 transition-transform" />
-                      Send Message
-                    </>
+                    'Send Message'
                   )}
                 </Button>
               </form>

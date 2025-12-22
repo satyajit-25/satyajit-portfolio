@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Award, Calendar } from 'lucide-react';
+import { ExternalLink, Github, Calendar } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Portfolio = () => {
@@ -79,9 +79,8 @@ const Portfolio = () => {
           ref={headerRef}
           className={`text-center mb-16 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
-            <Award className="w-4 h-4" />
-            <span>Portfolio</span>
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
+            Portfolio
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
