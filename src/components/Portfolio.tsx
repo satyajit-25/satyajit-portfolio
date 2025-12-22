@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ExternalLink, Github, Calendar } from 'lucide-react';
+import { ExternalLink, Github } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import employeeSalaryImg from '@/assets/employee-salary-prediction.png';
+import edrsImg from '@/assets/edrs.png';
+import aiVisionImg from '@/assets/ai-vision-toolkit.png';
 
 const Portfolio = () => {
   const { ref: headerRef, isVisible: headerVisible } = useScrollAnimation({ threshold: 0.1 });
@@ -10,159 +13,113 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Error Detection and Resolution System",
-      description: "A comprehensive software error tracking system developed to streamline bug reporting and resolution among teams, significantly improving testing efficiency and team collaboration.",
+      description: "Built this during my OCAC internship to help teams track and fix bugs faster. It made testing way smoother and helped everyone stay on the same page.",
       technologies: ["Java", "NetBeans IDE 8.2", "Oracle Database"],
       role: "Project Leader",
       company: "OCAC Internship",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      image: edrsImg,
       featured: true,
       year: "2024",
       viewDetailsLink: "https://github.com/satyajit-25/EDRS/blob/main/README.md",
       codeLink: "https://github.com/satyajit-25/EDRS/tree/main/src/ocacjava2_6pm"
     },
     {
-      title: "AI Computer Vision Toolkit (Virtual Mouse & Hand Gesture Detection)",
-      description: "Advanced computer vision project implementing virtual mouse control and hand gesture recognition using AI and machine learning techniques for touchless interaction.",
+      title: "AI Computer Vision Toolkit",
+      description: "Created a virtual mouse and hand gesture detection system. You can control your computer without touching anything - just use hand gestures.",
       technologies: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
       role: "AI Intern",
       company: "OCAC Internship",
-      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      image: aiVisionImg,
       featured: false,
       year: "2025",
       viewDetailsLink: "https://github.com/satyajit-25/VisionMouse/blob/main/README.md",
       codeLink: "https://github.com/satyajit-25/VisionMouse/blob/main/ai_virtual_mouse.py"
     },
     {
-      title: "Employee Salary Prediction Project",
-      description: "Machine learning model for predicting employee salaries based on various features using regression algorithms and data analysis techniques.",
+      title: "Employee Salary Prediction",
+      description: "A machine learning project that predicts salaries based on different factors. Built with Python and deployed as a web app using Streamlit.",
       technologies: ["Python", "Machine Learning", "Pandas", "Scikit-learn"],
       role: "ML Intern",
-      company: "Edunet Foundation in collaboration with IBM",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+      company: "Edunet Foundation with IBM",
+      image: employeeSalaryImg,
       featured: false,
       year: "2025",
       viewDetailsLink: "https://github.com/satyajit-25/Employee-salary-prediction/blob/main/README.md",
       codeLink: "https://github.com/satyajit-25/Employee-salary-prediction/blob/main/app.py"
-    },
-    {
-      title: "Web Application Dashboard",
-      description: "Modern responsive dashboard application with real-time data visualization and user management features.",
-      technologies: ["JavaScript", "HTML5", "CSS3"],
-      role: "Full Stack Developer",
-      company: "Personal Project",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-      featured: false,
-      year: "2024"
-    },
-    {
-      title: "Database Management System",
-      description: "Efficient database solution with optimized queries and data structure design for improved performance.",
-      technologies: ["SQL", "Oracle", "Python"],
-      role: "Database Developer",
-      company: "Academic Project",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
-      featured: false,
-      year: "2023"
     }
   ];
 
   return (
-    <section id="portfolio" className="py-24 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0">
-        <div className="absolute top-32 right-20 w-64 h-64 bg-primary/5 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-        <div className="absolute bottom-32 left-20 w-64 h-64 bg-accent/5 rounded-full mix-blend-multiply filter blur-2xl opacity-70"></div>
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="portfolio" className="py-24">
+      <div className="container mx-auto px-6">
         <div 
           ref={headerRef}
           className={`text-center mb-16 ${headerVisible ? 'scroll-visible' : 'scroll-hidden'}`}
         >
-          <div className="inline-flex items-center px-4 py-2 bg-primary/10 border border-primary/20 rounded-full text-sm font-medium text-primary mb-8">
-            Portfolio
-          </div>
+          <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Portfolio</p>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Let's have a look at
-            <br />
-            my <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-black italic">portfolio</span>
+            Some things I've built
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Here are some of my notable projects that showcase my skills in software development, 
-            web technologies, and problem-solving.
+            Real projects from internships and personal work. Each one taught me something new.
           </p>
         </div>
 
-        <div ref={gridRef} className="grid lg:grid-cols-3 gap-8">
+        <div ref={gridRef} className="grid lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index} 
-              className={`bg-card/80 backdrop-blur-sm border border-border/50 rounded-2xl overflow-hidden hover:shadow-xl hover:scale-105 transition-all duration-300 group ${
-                project.featured ? 'lg:col-span-2 lg:row-span-1' : ''
+              className={`bg-card border border-border rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300 ${
+                project.featured ? 'lg:col-span-2' : ''
               } ${gridVisible ? 'scroll-visible' : 'scroll-hidden'}`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
-              <div className="aspect-video bg-muted overflow-hidden relative">
+              <div className="aspect-video bg-muted overflow-hidden">
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute top-4 left-4 flex items-center gap-2 px-3 py-1 bg-background/90 backdrop-blur-sm rounded-full text-xs font-medium">
-                  <Calendar className="w-3 h-3" />
-                  {project.year}
-                </div>
               </div>
               
               <div className="p-6">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-sm font-medium text-primary">{project.role}</span>
-                  <span className="text-sm text-muted-foreground">• {project.company}</span>
+                <div className="flex items-center gap-2 mb-3 text-sm text-muted-foreground">
+                  <span className="font-medium text-primary">{project.role}</span>
+                  <span>at {project.company}</span>
+                  <span className="ml-auto">{project.year}</span>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-3">{project.title}</h3>
                 <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
-                    <span key={techIndex} className="px-3 py-1 bg-primary/10 text-primary text-xs rounded-full font-medium border border-primary/20">
+                    <span key={techIndex} className="px-3 py-1 bg-secondary text-secondary-foreground text-xs rounded-md font-medium">
                       {tech}
                     </span>
                   ))}
                 </div>
                 
                 <div className="flex gap-3">
-                  {project.viewDetailsLink ? (
+                  {project.viewDetailsLink && (
                     <Button 
                       variant="outline" 
-                      size="sm" 
-                      className="group/btn hover:bg-primary hover:text-primary-foreground"
+                      size="sm"
                       onClick={() => window.open(project.viewDetailsLink, '_blank')}
                     >
-                      <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform" />
-                      View Details
-                    </Button>
-                  ) : (
-                    <Button variant="outline" size="sm" className="group/btn hover:bg-primary hover:text-primary-foreground">
-                      <ExternalLink className="w-4 h-4 mr-2 group-hover/btn:rotate-45 transition-transform" />
+                      <ExternalLink className="w-4 h-4 mr-2" />
                       View Details
                     </Button>
                   )}
                   
-                  {project.codeLink ? (
+                  {project.codeLink && (
                     <Button 
                       variant="ghost" 
-                      size="sm" 
-                      className="group/btn"
+                      size="sm"
                       onClick={() => window.open(project.codeLink, '_blank')}
                     >
-                      <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
-                      Code
-                    </Button>
-                  ) : (
-                    <Button variant="ghost" size="sm" className="group/btn">
-                      <Github className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform" />
+                      <Github className="w-4 h-4 mr-2" />
                       Code
                     </Button>
                   )}
