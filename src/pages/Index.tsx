@@ -14,14 +14,12 @@ const Index = () => {
     <PageLoader delay={400}>
       <div className="min-h-screen bg-background">
         <Navigation />
-        <main id="main-content" role="main" tabIndex={-1}>
-          <Hero />
-          <About />
-          <Skills />
-          <Services />
-          <Portfolio />
-          <Contact />
-        </main>
+        <Hero />
+        <About />
+        <Skills />
+        <Services />
+        <Portfolio />
+        <Contact />
         <Footer />
         <BackToTop />
       </div>
