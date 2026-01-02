@@ -47,31 +47,38 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-      isScrolled 
-        ? 'bg-background/95 backdrop-blur-xl shadow-lg border-b border-border/50' 
-        : 'bg-transparent'
-    }`}>
+    <nav 
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+        isScrolled 
+          ? 'bg-background/95 backdrop-blur-xl shadow-lg border-b border-border/50' 
+          : 'bg-transparent'
+      }`}
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <button 
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-display font-bold text-foreground hover:text-primary transition-colors"
+            className="text-2xl font-display font-bold text-foreground hover:text-primary transition-colors focus-visible:ring-offset-0"
+            aria-label="Go to home section"
           >
             Satyajit<span className="text-primary">.dev</span>
           </button>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8" role="menubar">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`nav-link text-sm font-medium transition-colors ${
+                className={`nav-link text-sm font-medium transition-colors focus-visible:ring-offset-0 ${
                   activeSection === item.id 
                     ? 'active text-primary' 
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
+                role="menuitem"
+                aria-current={activeSection === item.id ? 'page' : undefined}
               >
                 {item.label}
               </button>
