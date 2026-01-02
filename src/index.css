@@ -102,6 +102,20 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-display;
   }
+
+  /* Focus styles for accessibility */
+  :focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+  }
+
+  /* Skip link for keyboard navigation */
+  .skip-link {
+    @apply absolute -top-10 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-md z-[100] transition-all duration-200;
+  }
+
+  .skip-link:focus {
+    @apply top-4;
+  }
 }
 
 /* Scroll Animation Classes */
