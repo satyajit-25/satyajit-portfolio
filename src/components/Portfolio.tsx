@@ -59,7 +59,7 @@ const Portfolio = () => {
           <p className="text-sm font-medium text-muted-foreground mb-4 uppercase tracking-wider">Portfolio</p>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Some things I've built
+            Some things <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-black italic">I've built</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Real projects from internships and personal work. Each one taught me something new.
