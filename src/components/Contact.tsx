@@ -153,7 +153,7 @@ const Contact = () => {
           </div>
           
           <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight">
-            Got an idea? Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-black italic">make it real</span>
+            Got an <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-black italic">idea</span>? Let's make it <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent font-black italic">real</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             I'm always open to discussing new opportunities, interesting projects, 
