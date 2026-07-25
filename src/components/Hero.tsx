@@ -60,6 +60,11 @@ const Hero = () => {
               <img 
                 src={profilePhoto}
                 alt="Satyajit Patra"
+                width={320}
+                height={320}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
                 className="w-full h-full object-cover"
               />
             </div>
